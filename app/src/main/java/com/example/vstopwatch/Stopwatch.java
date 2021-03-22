@@ -21,7 +21,7 @@ public class Stopwatch {
             Millisecond = (int)(timerMillisecond % 1000);
             _Second = (int)(timerMillisecond / 1000);
             _Minute = _Second / 60;
-            Hour = Minute / 60;
+            Hour = _Minute / 60;
             Second = _Second % 60;
             Minute = _Minute % 60;
 

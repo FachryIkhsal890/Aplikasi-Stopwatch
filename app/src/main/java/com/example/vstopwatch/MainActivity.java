@@ -13,7 +13,7 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button startBtn, resetBtn, lapbtn;
+    Button startBtn, resetBtn, lapBtn, clearBtn;
     TextView timeView;
     Handler customHandler = new Handler();
     LinearLayout ll;
@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         startBtn = findViewById(R.id.startBtn);
         resetBtn = findViewById(R.id.resetBtn);
-        lapbtn = findViewById(R.id.lapBtn);
+        lapBtn = findViewById(R.id.lapBtn);
+        clearBtn = findViewById(R.id.clearBtn);
         timeView = findViewById(R.id.timeView);
         ll = findViewById(R.id.lapRecord);
 
@@ -64,12 +65,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        lapbtn.setOnClickListener(new View.OnClickListener() {
+        lapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView tv = new TextView(ll.getContext());
                 tv.setText(timeView.getText());
                 ll.addView(tv);
+            }
+        });
+
+        clearBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll.removeAllViews();
             }
         });
     }

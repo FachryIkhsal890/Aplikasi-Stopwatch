@@ -20,7 +20,7 @@ public class Stopwatch {
             timerMillisecond = SystemClock.uptimeMillis() - timeInMillisecond ;
             Millisecond = (int)(timerMillisecond % 1000);
             _Second = (int)(timerMillisecond / 1000);
-            _Minute = Second / 60;
+            _Minute = _Second / 60;
             Hour = Minute / 60;
             Second = _Second % 60;
             Minute = _Minute % 60;

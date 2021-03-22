@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 TextView tv = new TextView(ll.getContext());
                 tv.setText(timeView.getText());
+                tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                tv.setTextSize(24);
                 ll.addView(tv);
             }
         });

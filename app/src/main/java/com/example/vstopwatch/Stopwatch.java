@@ -19,11 +19,11 @@ public class Stopwatch {
         public void run() {
             timerMillisecond = SystemClock.uptimeMillis() - timeInMillisecond ;
             Millisecond = (int)(timerMillisecond % 1000);
-            Second = (int)(timerMillisecond / 1000);
-            Minute = Second / 60;
-            Hour = Minute / 60;
-            _Second = Second % 60;
-            _Minute = Minute % 60;
+            _Second = (int)(timerMillisecond / 1000);
+            _Minute = _Second / 60;
+            Hour = _Minute / 60;
+            Second = _Second % 60;
+            Minute = _Minute % 60;
 
             customHandler.postDelayed(this,0);
         }

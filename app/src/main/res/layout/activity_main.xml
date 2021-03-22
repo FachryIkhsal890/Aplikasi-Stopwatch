@@ -27,4 +27,8 @@
         android:layout_height="wrap_content"
         android:onClick="resetChronometer"
         android:text="Reset" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/imouto"
 </LinearLayout>
